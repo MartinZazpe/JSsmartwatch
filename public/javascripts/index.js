@@ -59,7 +59,13 @@ window.addEventListener('load', function () {
         stopBtn.onclick = () => {
             clearInterval(Interval)
 
-            lastTime.innerHTML = "Your last time was " + secondsAdd + ":" + milisecondsAdd
+            if (minutesAdd == 00) {
+                lastTime.innerHTML = "Your last time was " + secondsAdd + ":" + milisecondsAdd + " seconds"
+            }
+            if (minutesAdd >= 1) {
+                lastTime.innerHTML = "Your last time was " + minutesAdd + ":" + secondsAdd + ":" + milisecondsAdd
+            }
+
         }
 
 
@@ -67,6 +73,10 @@ window.addEventListener('load', function () {
             clearInterval(Interval)
             miliseconds.innerHTML = "00"
             seconds.innerHTML = "00"
+            minutes.innerHTML = "00"
+            milisecondsAdd = "00"
+            secondsAdd = 00
+            minutesAdd = 00
         }
 
 

@@ -15,9 +15,9 @@ a {
   color: #00B7FF;
 }
 
-p {
+/* p {
   margin-top: 0;
-}
+} */
 
 p span {
   text-decoration: underline;
@@ -91,9 +91,11 @@ footer {
   background-color: rgb(75, 218, 225);
   display: flex;
   flex-flow: row wrap;
-  justify-content: space-evenly;
+  justify-content: center;
+  align-items: center;
   align-content: center;
-  font-size: 12px;
+  font-size: 14px;
+  text-align: center;
 }
 
 footer p span {
