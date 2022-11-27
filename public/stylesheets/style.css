@@ -28,7 +28,7 @@ p span {
   border-radius: 5px;
   background-color: aqua;
   height: 400px;
-  width: 420px;
+  width: 90%;
   display: flex;
   flex-flow: column wrap;
   align-items: center;
@@ -43,13 +43,25 @@ p span {
 }
 
 #buttons-container {
-  padding-top: 90px;
+  width: 100%;
+  padding-top: 60px;
   display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
 }
 
-#buttons-container>* {
-  margin: 0px 10px;
+#buttons-container button {
+  flex-basis: 30%;
+  /* flex-shrink: 3; */
 }
+
+/* #buttons-container button:nth-child(3) {
+  flex-basis: 100%;
+} */
+
+/* #buttons-container>* {
+  margin: 0px 5px;
+} */
 
 #buttons-container button {
   background-color: transparent;
@@ -107,4 +119,11 @@ footer p span {
 footer p span:hover {
   cursor: pointer;
   color: grey;
+}
+
+@media (min-width: 600px) {
+
+  #stopwatch-container {
+    width: 400px;
+  }
 }
